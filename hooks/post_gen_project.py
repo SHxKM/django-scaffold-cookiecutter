@@ -2,7 +2,7 @@ import os
 import shutil
 
 
-def remove_tailwindfolder_folder():
+def remove_tailwind_folder():
     print("You chose to not use TailWind CSS - removing its directory and config")
     theme_dir_path = "theme"
     if os.path.exists(theme_dir_path):
@@ -21,7 +21,7 @@ def prepend_env_file_to_gitignore():
 
 def main():
     if "{{cookiecutter.css_framework}}".lower() != "tailwindcss":
-        remove_tailwindfolder_folder()
+        remove_tailwind_folder()
 
     prepend_env_file_to_gitignore()
 

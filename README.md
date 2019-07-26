@@ -1,4 +1,4 @@
-# Scaffold Django: a flexible cookiecutter
+# Scaffold Django X: a flexible cookiecutter
 
 A cookiecutter that's simple yet flexible for quick scaffolding of Django projects. Save on boilerplate code and start prototyping/developing within seconds.
 

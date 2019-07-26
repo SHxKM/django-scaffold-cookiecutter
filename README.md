@@ -9,10 +9,12 @@ A cookiecutter that's simple yet flexible for quick scaffolding of Django projec
 - A simple `base.html` file: specific structure depends on the CSS framework you choose
 - An empty `main.js` in `static/your_project/javascript/` that's included in `base.html`
 - An empty `main.css` in `static/your_project/css/` that's included in `base.html`
+- A `.gitignore` with sane defaults
 - `Pipfile` for `pipenv` support: structure depends on the options you choose
-- A simple, auto-`gitignore`d `.env` file for environment variable management (with the pre-installed `python-decouple`)
-- A top level `tests` folder (can be discarded)
+- A simple, `gitignore`d `.env` file for environment variable management (with the pre-installed `python-decouple`)
+- A top level `tests` folder
 - `.pylintrc` file for basic Python linting (pre-installed: `pylint` and `pylint-django`)
+- `.eslintrc` file for basic JavaScript linting.
 
 ### Dependencies
 

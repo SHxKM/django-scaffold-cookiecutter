@@ -1,0 +1,56 @@
+{% raw %}{% load static %}{% endraw %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ cookiecutter.project_name }}</title>
+  <meta name="description" content="{{ cookiecutter.description }}">
+  <meta name="keywords" content="">
+  <meta name="author" content="{{ cookiecutter.author_name }}">
+
+{% if cookiecutter.include_jquery_cdn == "y" %}<!-- jQuery CDN -->
+  <script 
+    src="https://code.jquery.com/jquery-3.4.1.min.js" 
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous">
+  </script>{% endif %}
+{% if cookiecutter.css_framework == "bootstrap" %}<!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{% elif cookiecutter.css_framework == "tailwindcss" %}
+{% raw %} <link rel="stylesheet" href="{% static 'css/styles.min.css' %}" type="text/css"/>{% endraw %}
+{% endif %}
+{% raw %} <link rel="stylesheet" href="{% static "css/main.css" %}">{% endraw %}
+{% raw %} <script type="text/javascript" src="{% static 'javascript/main.js' %}"></script>{% endraw %}
+
+</head>
+
+{% if cookiecutter.css_framework == "tailwindcss" %}
+<body class="bg-grey-lightest font-serif leading-normal tracking-normal">
+  <div class="container mx-auto">
+    <section class="flex items-center justify-center h-screen">
+      <div class="flex flex-col items-center justify-center">
+        <h1 class="text-5xl">{{ cookiecutter.project_name }}</h1>
+        <h2 class="text-3xl">{{ cookiecutter.description }}</h2>
+      </div>
+    </section>
+  </div>
+</body>
+{% elif cookiecutter.css_framework == "bootstrap" %}
+<body>
+  <div class="d-flex flex-column">
+    <h1 class="align-self-center font-weight-bold mt-5">{{ cookiecutter.project_name }}</h1>
+    <h2 class="align-self-center font-weight-normal">{{ cookiecutter.description }}</h2>
+  </div>
+</body>
+{% elif cookiecutter.css_framework == "none" %}
+<body>
+  <div>
+    <h2>{{ cookiecutter.project_name }}</h2>
+    <h1>{{ cookiecutter.description }}</h1>
+  </div>
+</body>
+{% endif %}
+</html>

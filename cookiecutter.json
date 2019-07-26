@@ -1,0 +1,16 @@
+{
+	"project_slug": "open_folder",
+	"project_name": "Open Folder",
+	"description": "A very nice weblog",
+	"author_name": "Shibel",
+	"author_email": "openfolder@example.com",
+	"include_jquery_cdn": "n",
+	"css_framework": [
+		"tailwindcss",
+		"bootstrap",
+		"none"
+	],
+	"_copy_without_render": [
+		"theme"
+	]
+}

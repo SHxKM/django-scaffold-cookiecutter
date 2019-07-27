@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    {% if cookiecutter.css_framework == 'tailwindcss' -%}
+    {%- if cookiecutter.css_framework == 'tailwindcss' -%}
     "tailwind",
     "theme",
     {%- endif %}    
@@ -42,8 +42,7 @@ INSTALLED_APPS = [
 
 {% if cookiecutter.css_framework == 'tailwindcss' -%}
 TAILWIND_APP_NAME = "theme"
-{%- endif %}
-
+{%- endif -%}
 
 
 MIDDLEWARE = [

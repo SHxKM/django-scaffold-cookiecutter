@@ -42,7 +42,7 @@ INSTALLED_APPS = [
 
 {% if cookiecutter.css_framework == 'tailwindcss' -%}
 TAILWIND_APP_NAME = "theme"
-{%- endif -%}
+{%- endif %}
 
 
 MIDDLEWARE = [
